@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Properties">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Android/Properties/out/artifacts/Properties_jar/Properties.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

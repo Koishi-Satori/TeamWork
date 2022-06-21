@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="teamwork.Control">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TextField layoutX="860.0" prefHeight="38.0" prefWidth="635.0"
+                           promptText="            search in this computer" fx:id="textField"/>
+                <MenuBar prefHeight="24.0" prefWidth="300.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File" fx:id="file">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" fx:id="newItem"/>
+                                <MenuItem mnemonicParsing="false" text="Open…" fx:id="open"/>
+                                <Menu mnemonicParsing="false" text="Open Recent" fx:id="openRec"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Close" fx:id="close"/>
+                                <MenuItem mnemonicParsing="false" text="Save" fx:id="save"/>
+                                <MenuItem mnemonicParsing="false" text="Save As…" fx:id="saveAs"/>
+                                <MenuItem mnemonicParsing="false" text="Revert" fx:id="revert"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Preferences…"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Quit"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Undo"/>
+                                <MenuItem mnemonicParsing="false" text="Redo"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Cut" fx:id="cut"/>
+                                <MenuItem mnemonicParsing="false" text="Copy" fx:id="copy"/>
+                                <MenuItem mnemonicParsing="false" text="Paste" fx:id="paste"/>
+                                <MenuItem mnemonicParsing="false" text="Delete" fx:id="delete"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Select All"/>
+                                <MenuItem mnemonicParsing="false" text="Unselect All"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About AllUWant"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </MenuBar>
+                <Button layoutX="742.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" text="➡" fx:id="next"/>
+                <Button layoutX="700.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" text="⬅" fx:id="post"/>
+                <Text layoutX="784.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="search:"
+                      textAlignment="CENTER" wrappingWidth="84.0"/>
+                <Text layoutX="1502.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AllUWant" fx:id="searchConfirm"/>
+                <TableView layoutY="638.0" prefHeight="240.0" prefWidth="300.0" fx:id="useTable">
+                    <columns>
+                        <TableColumn minWidth="150.0" prefWidth="150.0" text="History" fx:id="history">
+                        </TableColumn>
+                        <TableColumn minWidth="150.0" prefWidth="150.0" text="Location" fx:id="location"/>
+                    </columns>
+                </TableView>
+                <TextFlow layoutX="300.0" prefHeight="38.0" prefWidth="400.0"/>
+                <TreeView layoutY="38.0" prefHeight="580.0" prefWidth="300.0" fx:id="structure"/>
+                <Pane layoutX="300.0" layoutY="38.0" prefHeight="820.0" prefWidth="950.0">
+                    <children>
+                        <ScrollPane prefHeight="820.0" prefWidth="629.0" fx:id="workspace">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1088.0" prefWidth="627.0"/>
+                            </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="641.0" layoutY="167.0" prefHeight="451.0" prefWidth="309.0">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="656.0" prefWidth="297.0"/>
+                            </content>
+                        </ScrollPane>
+                        <Text layoutX="760.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="常用文件"/>
+                    </children>
+                </Pane>
+                <Slider layoutY="618.0" prefHeight="24.0" prefWidth="300.0"/>
+                <Slider layoutY="876.0" prefHeight="21.0" prefWidth="147.0"/>
+                <Slider layoutX="150.0" layoutY="876.0" prefHeight="21.0" prefWidth="147.0"/>
+                <Text layoutX="1405.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="便签条"/>
+                <MenuButton layoutX="1443.0" layoutY="869.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0"
+                            text="Settings" textAlignment="JUSTIFY">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="ADD"/>
+                        <MenuItem mnemonicParsing="false" text="DEL"/>
+                    </items>
+                </MenuButton>
+                <Button layoutX="1286.0" layoutY="869.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0"
+                        text="Home"/>
+                <TextArea layoutX="1289.0" layoutY="230.0" prefHeight="437.0" prefWidth="287.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>
+        <URL value="@BasicApplication.css"/>
+    </stylesheets>
+</VBox>
